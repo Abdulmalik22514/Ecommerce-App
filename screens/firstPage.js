@@ -14,7 +14,7 @@ import { CustomButton } from "../components/button";
 export default function FirstPage({ navigation }) {
   return (
     <ImageBackground
-      source={require("../background.png")}
+      source={require("../assets/pictures/background.png")}
       style={styles.container}
     >
       <StatusBar style="light" />
@@ -38,7 +38,7 @@ export default function FirstPage({ navigation }) {
         />
       </View>
       <View style={styles.option}>
-        <Image source={require("../google.png")} />
+        <Image source={require("../assets/pictures/google.png")} />
         <Text style={styles.continue}>Continue with google</Text>
       </View>
     </ImageBackground>

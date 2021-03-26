@@ -79,13 +79,33 @@ export default function Preview({ navigation, route }) {
 const getIcon = (title) => {
   switch (title) {
     case "PURE SUN FARMS":
-      return <Image source={require("../blend1.png")} style={styles.pure} />;
+      return (
+        <Image
+          source={require("../assets/pictures/blend1.png")}
+          style={styles.pure}
+        />
+      );
     case "OSUN SUN FARMS":
-      return <Image source={require("../blend2.png")} style={styles.pure} />;
+      return (
+        <Image
+          source={require("../assets/pictures/blend2.png")}
+          style={styles.pure}
+        />
+      );
     case "OHIO SUN FARMS":
-      return <Image source={require("../blend3.png")} style={styles.pure} />;
+      return (
+        <Image
+          source={require("../assets/pictures/blend3.png")}
+          style={styles.pure}
+        />
+      );
     case "ONDO SUN FARMS":
-      return <Image source={require("../blend4.png")} style={styles.pure} />;
+      return (
+        <Image
+          source={require("../assets/pictures/blend4.png")}
+          style={styles.pure}
+        />
+      );
     default:
       return null;
   }

@@ -38,7 +38,10 @@ export const Header = () => {
           <Heart />
         </TouchableOpacity>
         <TouchableOpacity>
-          <Image source={require("../man.png")} style={styles.man} />
+          <Image
+            source={require("../assets/pictures/man.png")}
+            style={styles.man}
+          />
         </TouchableOpacity>
       </View>
     </View>

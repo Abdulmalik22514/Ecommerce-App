@@ -12,15 +12,15 @@ import { CustomImage } from "../components/image";
 
 const Images = [
   {
-    icon: require("../vape.png"),
+    icon: require("../assets/pictures//vape.png"),
     title: "Vapes",
   },
   {
-    icon: require("../weed.png"),
+    icon: require("../assets/pictures/weed.png"),
     title: "Flowers",
   },
   {
-    icon: require("../cookie.png"),
+    icon: require("../assets/pictures/cookie.png"),
     title: "Edibles",
   },
 ];
@@ -47,13 +47,16 @@ export default function Home({ navigation }) {
             <Heart />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Image source={require("../man.png")} style={styles.man} />
+            <Image
+              source={require("../assets/pictures/man.png")}
+              style={styles.man}
+            />
           </TouchableOpacity>
         </View>
       </View>
       <View style={styles.bgBox}>
         <ImageBackground
-          source={require("../flowerBackground.png")}
+          source={require("../assets/pictures/flowerBackground.png")}
           style={styles.back}
         >
           <Spliff fill={"#81AA66"} width={35} height={40} style={styles.off} />

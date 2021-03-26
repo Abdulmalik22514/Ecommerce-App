@@ -1,30 +1,30 @@
 export const Items = [
   {
-    icon: require("../blend1.png"),
+    icon: require("../assets/pictures/blend1.png"),
     title: "PURE SUN FARMS",
     blendType: "indica blend1",
     money: "$20",
   },
   {
-    icon: require("../blend2.png"),
+    icon: require("../assets/pictures/blend2.png"),
     title: "OSUN SUN FARMS",
     blendType: "indica blend2",
     money: "$40",
   },
   {
-    icon: require("../blend3.png"),
+    icon: require("../assets/pictures/blend3.png"),
     title: "OHIO SUN FARMS",
     blendType: "indica blend3",
     money: "$30",
   },
   {
-    icon: require("../blend4.png"),
+    icon: require("../assets/pictures/blend4.png"),
     title: "ONDO SUN FARMS",
     blendType: "indica blend4",
     money: "$25",
   },
   {
-    icon: require("../blend3.png"),
+    icon: require("../assets/pictures/blend3.png"),
     title: "OHIO SUN FARMS",
     blendType: "indica blend3",
     money: "$30",
