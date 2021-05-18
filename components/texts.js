@@ -12,9 +12,12 @@ import {
   Addition,
 } from "../assets/svg";
 
-export const FlowerNames = ({ title, isActive, onPress }) => {
+export const FlowerNames = ({ title, isActive, onPress, isStart, style }) => {
   return (
-    <TouchableOpacity style={styles.cont} onPress={onPress}>
+    <TouchableOpacity
+      style={[styles.cont, isStart && styles.tent, style]}
+      onPress={onPress}
+    >
       <Text>{title}</Text>
       {isActive && <View style={styles.green}></View>}
     </TouchableOpacity>
@@ -49,6 +52,11 @@ export const Header = () => {
 };
 
 const styles = StyleSheet.create({
+  tent: {
+    flexDirection: "column",
+    alignItems: "flex-start",
+    marginTop: 20,
+  },
   text: {
     fontWeight: "bold",
     fontSize: 18,

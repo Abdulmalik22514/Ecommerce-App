@@ -30,7 +30,7 @@ export default function Home({ navigation }) {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.sipif}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <Menu />
           </TouchableOpacity>
 
