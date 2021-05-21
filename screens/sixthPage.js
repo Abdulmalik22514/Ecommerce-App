@@ -1,5 +1,5 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
+import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Checked } from "../assets/svg";
 
@@ -24,6 +24,34 @@ export default function PaymentStatus({ navigation }) {
       >
         <Text style={styles.shopping}>Continue shopping</Text>
       </TouchableOpacity>
+      <Formik
+        initialValues={{ email: "", password: "" }}
+        onSubmit={(values) => console.log(values)}
+      >
+        {({ handleChange, handleBlur, handleSubmit, values }) => (
+          <>
+            <TextInput
+              name="email"
+              placeholder="Email Address"
+              style={styles.textInput}
+              onChangeText={handleChange("email")}
+              onBlur={handleBlur("email")}
+              value={values.email}
+              keyboardType="email-address"
+            />
+            <TextInput
+              name="password"
+              placeholder="Password"
+              style={styles.textInput}
+              onChangeText={handleChange("password")}
+              onBlur={handleBlur("password")}
+              value={values.password}
+              secureTextEntry
+            />
+            <Button onPress={handleSubmit} title="Submit" />
+          </>
+        )}
+      </Formik>
     </View>
   );
 }
