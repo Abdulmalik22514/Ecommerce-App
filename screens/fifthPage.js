@@ -1,14 +1,15 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Addition, Back, Forward, Heart, Subtraction } from "../assets/svg";
+// @ts-nocheck
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Addition, Back, Forward, Heart, Subtraction } from '../assets/svg';
 
 export default function Preview({ navigation, route }) {
   const { title } = route.params;
   const icon = getIcon(title);
   return (
     <View style={styles.container}>
-      <StatusBar style={"dark"} />
+      <StatusBar style="dark" />
       <View style={styles.topBox}>
         <View style={styles.header}>
           <TouchableOpacity
@@ -21,7 +22,7 @@ export default function Preview({ navigation, route }) {
             <TouchableOpacity>
               <Heart />
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate("status")}>
+            <TouchableOpacity onPress={() => navigation.navigate('status')}>
               <Forward />
             </TouchableOpacity>
           </View>
@@ -76,33 +77,33 @@ export default function Preview({ navigation, route }) {
   );
 }
 
-const getIcon = (title) => {
+const getIcon = title => {
   switch (title) {
-    case "PURE SUN FARMS":
+    case 'PURE SUN FARMS':
       return (
         <Image
-          source={require("../assets/pictures/blend1.png")}
+          source={require('../assets/pictures/blend1.png')}
           style={styles.pure}
         />
       );
-    case "OSUN SUN FARMS":
+    case 'OSUN SUN FARMS':
       return (
         <Image
-          source={require("../assets/pictures/blend2.png")}
+          source={require('../assets/pictures/blend2.png')}
           style={styles.pure}
         />
       );
-    case "OHIO SUN FARMS":
+    case 'OHIO SUN FARMS':
       return (
         <Image
-          source={require("../assets/pictures/blend3.png")}
+          source={require('../assets/pictures/blend3.png')}
           style={styles.pure}
         />
       );
-    case "ONDO SUN FARMS":
+    case 'ONDO SUN FARMS':
       return (
         <Image
-          source={require("../assets/pictures/blend4.png")}
+          source={require('../assets/pictures/blend4.png')}
           style={styles.pure}
         />
       );
@@ -116,38 +117,38 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 20,
     // paddingHorizontal: 25,
-    backgroundColor: "white",
+    backgroundColor: 'white',
   },
   total: {
     fontSize: 11,
   },
   addTo: {
-    fontWeight: "bold",
-    color: "white",
+    fontWeight: 'bold',
+    color: 'white',
   },
   toBag: {
-    width: "50%",
-    backgroundColor: "#81AA66",
+    width: '50%',
+    backgroundColor: '#81AA66',
     height: 50,
     borderRadius: 5,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   bottomAdd: {
-    flexDirection: "row",
+    flexDirection: 'row',
     // justifyContent: "space-between",
     paddingHorizontal: 20,
-    alignItems: "center",
+    alignItems: 'center',
   },
   bottomTotal: {
-    flexDirection: "row",
-    width: "50%",
-    alignItems: "center",
+    flexDirection: 'row',
+    width: '50%',
+    alignItems: 'center',
   },
   dollar: {
     fontSize: 25,
-    color: "#81AA66",
-    fontWeight: "bold",
+    color: '#81AA66',
+    fontWeight: 'bold',
   },
   gram: {
     fontSize: 10,
@@ -157,70 +158,70 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   one: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     fontSize: 25,
   },
   line: {
     borderWidth: 0.2,
-    borderColor: "black",
+    borderColor: 'black',
     marginBottom: 10,
   },
   addTotal: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginBottom: 15,
-    alignItems: "center",
+    alignItems: 'center',
     // justifyContent: "space-between",
     // width: "100%",
   },
   amount: {
-    flexDirection: "row",
-    alignItems: "flex-end",
+    flexDirection: 'row',
+    alignItems: 'flex-end',
   },
   addSub: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     width: 110,
     marginRight: 125,
-    alignItems: "center",
+    alignItems: 'center',
   },
   long: {
     fontSize: 12,
-    color: "white",
+    color: 'white',
     marginBottom: 10,
     lineHeight: 15,
     width: 319,
   },
   th: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginRight: 7,
   },
   cb: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginRight: 7,
   },
   percent: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginBottom: 10,
   },
   thc: {
-    flexDirection: "row",
+    flexDirection: 'row',
     width: 80,
     marginRight: 10,
   },
   cbd: {
-    flexDirection: "row",
+    flexDirection: 'row',
     width: 100,
   },
   indicaBlend: {
-    color: "#81AA66",
+    color: '#81AA66',
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginBottom: 7,
     width: 250,
     letterSpacing: 0.2,
   },
   topBox: {
-    height: "45%",
+    height: '45%',
   },
   farm: {
     fontSize: 10,
@@ -228,30 +229,30 @@ const styles = StyleSheet.create({
   },
   bottomBox: {
     flex: 1,
-    backgroundColor: "grey",
+    backgroundColor: 'grey',
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
     paddingTop: 20,
     paddingBottom: 20,
   },
   backIcon: {
-    width: "80%",
+    width: '80%',
   },
   pure: {
     width: 150,
     height: 150,
-    alignSelf: "center",
+    alignSelf: 'center',
     marginTop: 20,
   },
   heartShape: {
-    flexDirection: "row",
-    width: "20%",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    width: '20%',
+    justifyContent: 'space-between',
   },
   header: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginTop: 30,
     marginHorizontal: 25,
-    justifyContent: "space-between",
+    justifyContent: 'space-between',
   },
 });
