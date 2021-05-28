@@ -1,4 +1,6 @@
-import React from "react";
+// @ts-nocheck
+/* eslint-disable global-require */
+import React from 'react';
 import {
   Image,
   ImageBackground,
@@ -6,22 +8,22 @@ import {
   Text,
   TouchableOpacity,
   View,
-} from "react-native";
-import { Heart, Menu, Search, Spliff } from "../assets/svg";
-import { CustomImage } from "../components/image";
+} from 'react-native';
+import { Heart, Menu, Search, Spliff } from '../assets/svg';
+import { CustomImage } from '../components/image';
 
 const Images = [
   {
-    icon: require("../assets/pictures//vape.png"),
-    title: "Vapes",
+    icon: require('../assets/pictures/vape.png'),
+    title: 'Vapes',
   },
   {
-    icon: require("../assets/pictures/weed.png"),
-    title: "Flowers",
+    icon: require('../assets/pictures/weed.png'),
+    title: 'Flowers',
   },
   {
-    icon: require("../assets/pictures/cookie.png"),
-    title: "Edibles",
+    icon: require('../assets/pictures/cookie.png'),
+    title: 'Edibles',
   },
 ];
 
@@ -33,14 +35,13 @@ export default function Home({ navigation }) {
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <Menu />
           </TouchableOpacity>
-
           <View style={styles.spiff}>
-            <Spliff fill={"#81AA66"} />
+            <Spliff fill="#81AA66" />
             <Text style={styles.text}>Spliff</Text>
           </View>
         </View>
         <View style={styles.icons}>
-          <TouchableOpacity onPress={() => navigation.navigate("select")}>
+          <TouchableOpacity onPress={() => navigation.navigate('select')}>
             <Search />
           </TouchableOpacity>
           <TouchableOpacity>
@@ -48,7 +49,7 @@ export default function Home({ navigation }) {
           </TouchableOpacity>
           <TouchableOpacity>
             <Image
-              source={require("../assets/pictures/man.png")}
+              source={require('../assets/pictures/man.png')}
               style={styles.man}
             />
           </TouchableOpacity>
@@ -56,10 +57,10 @@ export default function Home({ navigation }) {
       </View>
       <View style={styles.bgBox}>
         <ImageBackground
-          source={require("../assets/pictures/flowerBackground.png")}
+          source={require('../assets/pictures/flowerBackground.png')}
           style={styles.back}
         >
-          <Spliff fill={"#81AA66"} width={35} height={40} style={styles.off} />
+          <Spliff fill="#81AA66" width={35} height={40} style={styles.off} />
           <Text style={styles.discount}>50% Off Everything</Text>
           <Text>with code: sativa 123</Text>
         </ImageBackground>
@@ -81,10 +82,10 @@ export default function Home({ navigation }) {
 
 const styles = StyleSheet.create({
   bottom: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     marginTop: 20,
-    alignItems: "center",
+    alignItems: 'center',
   },
   container: {
     flex: 1,
@@ -92,16 +93,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 22,
   },
   mark: {
-    color: "grey",
-    textAlign: "center",
-    alignSelf: "center",
+    color: 'grey',
+    textAlign: 'center',
+    alignSelf: 'center',
     fontSize: 12,
     width: 300,
     marginTop: 10,
   },
   categories: {
-    textAlign: "center",
-    fontWeight: "bold",
+    textAlign: 'center',
+    fontWeight: 'bold',
     fontSize: 20,
     marginTop: 10,
   },
@@ -111,52 +112,52 @@ const styles = StyleSheet.create({
   },
   discount: {
     fontSize: 30,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     lineHeight: 35,
     width: 180,
-    textAlign: "center",
+    textAlign: 'center',
     marginBottom: 20,
   },
   bgBox: {
-    width: "100%",
+    width: '100%',
     height: 270,
     borderRadius: 5,
-    backgroundColor: "transparent",
-    borderColor: "grey",
+    backgroundColor: 'transparent',
+    borderColor: 'grey',
     borderWidth: 0.5,
-    overflow: "hidden",
-    alignSelf: "center",
+    overflow: 'hidden',
+    alignSelf: 'center',
     // opacity: 0.6,
   },
   back: {
-    width: "100%",
-    height: "100%",
-    alignItems: "center",
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
     // paddingTop: 50,
     opacity: 0.6,
   },
   sipif: {
-    flexDirection: "row",
-    alignItems: "center",
-    width: "60%",
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '60%',
   },
   text: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     fontSize: 18,
     marginLeft: 5,
   },
   icons: {
-    flexDirection: "row",
-    width: "40%",
-    justifyContent: "space-between",
-    alignItems: "center",
+    flexDirection: 'row',
+    width: '40%',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   header: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginTop: 20,
     height: 50,
-    alignItems: "center",
-    width: "100%",
+    alignItems: 'center',
+    width: '100%',
     marginBottom: 15,
   },
   man: {
@@ -164,9 +165,9 @@ const styles = StyleSheet.create({
     height: 35,
   },
   spiff: {
-    flexDirection: "row",
+    flexDirection: 'row',
     width: 80,
-    alignItems: "center",
+    alignItems: 'center',
     marginLeft: 25,
   },
 });
