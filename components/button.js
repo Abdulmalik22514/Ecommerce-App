@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, TextInput, TouchableOpacity, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, TextInput, TouchableOpacity, Text } from 'react-native';
 
 export const CustomButton = ({
   title,
@@ -29,29 +29,30 @@ export const CustomButton = ({
 
 const styles = StyleSheet.create({
   borderButton: {
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
     borderWidth: 2,
-    borderColor: "white",
+    borderColor: 'white',
   },
   titleColorButton: {
-    backgroundColor: "white",
+    backgroundColor: 'white',
   },
   smallButton: {
-    width: 120,
+    width: 133,
   },
   titleColor: {
-    color: "#81AA66",
+    color: '#81AA66',
   },
   acct: {
-    fontWeight: "bold",
-    color: "white",
+    fontWeight: '700',
+    color: 'white',
+    fontSize: 18,
   },
   account: {
-    backgroundColor: "#81AA66",
-    height: 50,
+    backgroundColor: '#81AA66',
+    height: 52,
     borderRadius: 5,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     marginTop: 25,
   },
 });

@@ -1,5 +1,12 @@
-import React from "react";
-import { StyleSheet, TextInput, View, Text } from "react-native";
+import React from 'react';
+import {
+  StyleSheet,
+  TextInput,
+  View,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
+import { Eye } from '../assets/svg';
 
 export const CustomInput = ({
   placeHolder,
@@ -10,21 +17,25 @@ export const CustomInput = ({
   value,
   label,
   isSmall,
+  hasEye,
 }) => {
   return (
     <View style={[styles.container, style]}>
       <View style={[styles.address, isSmall && styles.smallView]}>
         <Text style={styles.email}>{label}</Text>
       </View>
-      <TextInput
-        value={value}
-        keyboardType={type}
-        style={styles.input}
-        placeholder={placeHolder}
-        placeholderTextColor="black"
-        onChangeText={onChange}
-        secureTextEntry={secure}
-      />
+      <View style={styles.inputBox}>
+        <TextInput
+          value={value}
+          keyboardType={type}
+          style={styles.input}
+          placeholder={placeHolder}
+          placeholderTextColor="black"
+          onChangeText={onChange}
+          secureTextEntry={secure}
+        />
+        <TouchableOpacity>{hasEye ? <Eye /> : <View />}</TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -32,18 +43,29 @@ export const CustomInput = ({
 const styles = StyleSheet.create({
   smallView: {},
   email: {
-    color: "white",
+    color: 'white',
     fontSize: 10,
-    fontWeight: "bold",
+    fontWeight: 'bold',
+  },
+  inputBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#999999',
+    width: '100%',
+    height: 50,
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
   },
   address: {
-    backgroundColor: "#81AA66",
+    backgroundColor: '#81AA66',
     paddingHorizontal: 10,
     height: 20,
     borderRadius: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    position: "absolute",
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
     left: 13,
     top: -10,
     zIndex: 100,
@@ -52,17 +74,8 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   input: {
-    fontSize: 15,
-    borderWidth: 1,
-    fontWeight: "700",
-    borderColor: "#999999",
-    // justifyContent: "center",
-    width: "100%",
-    height: 50,
-    padding: 10,
-    borderRadius: 5,
-    // textAlign: "center",
-    // marginTop:40,
-    // color:'white',
+    fontSize: 16,
+    fontWeight: '500',
+    width: '90%',
   },
 });
